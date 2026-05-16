@@ -1,0 +1,7 @@
+# ninja log v5
+3	413	8005925202348224	build.ninja	811e82224143ab4b
+39	2730	8005925229984750	CMakeFiles/PlatformKitTests.dir/tests/test.cpp.obj	5e21573e9526228f
+32	2793	8005925230567183	CMakeFiles/PlatformKit.dir/src/PlatformKit/WindowWin32.cpp.obj	b6831f66005d984
+2794	2878	8005925231487289	libPlatformKit.a	c7ac16ab7d7b99cc
+2879	3009	8005925232917327	PlatformKitTests.exe	5f6c4ae43e0995
+3009	3061	0	CMakeFiles/install.util	9b89795e90183d2a

@@ -1,0 +1,12 @@
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-debug/lib/libPlatformKit.a
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-debug/include/PlatformKit/InputStateTracker.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-debug/include/PlatformKit/IOEvents.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-debug/include/PlatformKit/Keyboard.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-debug/include/PlatformKit/Mouse.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-debug/include/PlatformKit/Structs.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-debug/include/PlatformKit/Window.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-debug/include/PlatformKit/WindowEvents.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-debug/include/PlatformKit/WindowWin32.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-debug/lib/cmake/PlatformKit/PlatformKitTargets.cmake
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-debug/lib/cmake/PlatformKit/PlatformKitTargets-debug.cmake
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-debug/lib/cmake/PlatformKit/PlatformKitConfig.cmake

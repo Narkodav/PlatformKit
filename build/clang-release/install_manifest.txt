@@ -1,0 +1,12 @@
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-release/lib/libPlatformKit.a
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-release/include/PlatformKit/InputStateTracker.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-release/include/PlatformKit/IOEvents.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-release/include/PlatformKit/Keyboard.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-release/include/PlatformKit/Mouse.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-release/include/PlatformKit/Structs.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-release/include/PlatformKit/Window.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-release/include/PlatformKit/WindowEvents.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-release/include/PlatformKit/WindowWin32.h
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-release/lib/cmake/PlatformKit/PlatformKitTargets.cmake
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-release/lib/cmake/PlatformKit/PlatformKitTargets-release.cmake
+E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-release/lib/cmake/PlatformKit/PlatformKitConfig.cmake

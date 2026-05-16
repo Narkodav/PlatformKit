@@ -1,0 +1,85 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "Clang",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"C:/Users/user/.utils/llvm-mingw/include/c++/v1",
+						"C:/Users/user/.utils/llvm-mingw/lib/clang/22/include",
+						"C:/Users/user/.utils/llvm-mingw/include"
+					],
+					"linkDirectories" : 
+					[
+						"C:/Users/user/.utils/llvm-mingw/x86_64-w64-mingw32/lib",
+						"C:/Users/user/.utils/llvm-mingw/x86_64-w64-mingw32/mingw/lib",
+						"C:/Users/user/.utils/llvm-mingw/lib",
+						"C:/Users/user/.utils/llvm-mingw/lib/clang/22/lib/windows"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"c++",
+						"mingw32",
+						"unwind",
+						"moldname",
+						"mingwex",
+						"advapi32",
+						"shell32",
+						"user32",
+						"kernel32",
+						"mingw32",
+						"unwind",
+						"moldname",
+						"mingwex",
+						"kernel32"
+					]
+				},
+				"path" : "C:/Users/user/.utils/llvm-mingw/bin/clang++.exe",
+				"version" : "22.1.0"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"m",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm",
+				"ccm",
+				"cxxm",
+				"c++m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"implicit" : {},
+				"path" : "A:/compilers/mingw64/bin/windres.exe"
+			},
+			"language" : "RC",
+			"sourceFileExtensions" : 
+			[
+				"rc",
+				"RC"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

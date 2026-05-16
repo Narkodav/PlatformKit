@@ -1,0 +1,70 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-539b2290db70bd5ed58f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PlatformKit",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "PlatformKit::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PlatformKit-Debug-a36c2cd89a81a5fe4d28.json",
+					"name" : "PlatformKit",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PlatformKitTests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PlatformKitTests-Debug-39bfee6c8569ac99df5e.json",
+					"name" : "PlatformKitTests",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-debug",
+		"source" : "E:/Program Files (x86)/Code/C_code/libraries/PlatformKit"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

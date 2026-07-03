@@ -12,11 +12,7 @@
 #include "CommonApi/Utilities/EventSystems/MultiEventSystem.h"
 #include "CommonApi/Utilities/EventSystems/SingleCallbackEventSystem.h"
 
-#if defined(_ARM_) || defined(_ARM64_)
-    #define PLATFORM_WIN32_WINPROC_CALLBACK
-#else
-    #define PLATFORM_WIN32_WINPROC_CALLBACK __stdcall
-#endif
+#define PLATFORM_WIN32_WINPROC_CALLBACK CALLBACK
 
 namespace PlatformKit::Win32
 {
@@ -24,10 +20,10 @@ namespace PlatformKit::Win32
     class Window
     {
     private:
-        class ClassRegistrator;
-
         static MessageResult PLATFORM_WIN32_WINPROC_CALLBACK windowProc(WindowHandle windowHandle, 
             uint32_t message, MessageValueUnsigned auxiliaryData, MessageValueSigned payloadData);
+
+        class ClassRegistrator;
 
     public:
         using EventManager = Utils::MultiEventSystem<Utils::SingleCallbackEventSystem, WindowEventPolicy, IOEventPolicy>;
@@ -186,6 +182,10 @@ namespace PlatformKit::Win32
 
         MessageResult onKeyboardInput(std::vector<uint8_t>& input);
         MessageResult onMouseInput(std::vector<uint8_t>& input);
+
+        MessageResult onWindowStartResizing(MessageValueUnsigned auxiliaryData, MessageValueSigned payloadData);
+        MessageResult onWindowStopResizing(MessageValueUnsigned auxiliaryData, MessageValueSigned payloadData);
+        MessageResult onWindowResizing(MessageValueUnsigned auxiliaryData, MessageValueSigned payloadData);
 
         template<IOEvents eventPress, IOEvents eventRelease>
         void checkMouseButton(uint16_t buttonDownFlag, uint16_t buttonUpFlag, uint16_t flags, MouseButton button) {

@@ -1,8 +1,8 @@
-# Install script for directory: E:/Program Files (x86)/Code/C_code/libraries/PlatformKit
+# Install script for directory: E:/Code/C_code/libraries/PlatformKit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/install/clang-release")
+  set(CMAKE_INSTALL_PREFIX "E:/Code/C_code/install-root/clang-release")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,24 +32,24 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set path to fallback-tool for dependency-resolution.
+# Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "C:/Users/user/.utils/llvm-mingw/bin/llvm-objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-release/libPlatformKit.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "E:/Code/C_code/libraries/PlatformKit/build/clang-release/libPlatformKit.a")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "E:/Code/C_code/libraries/PlatformKit/include/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/PlatformKit/PlatformKitTargets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/PlatformKit/PlatformKitTargets.cmake"
-         "E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-release/CMakeFiles/Export/766bd305301f686e339f6babf0e04657/PlatformKitTargets.cmake")
+         "E:/Code/C_code/libraries/PlatformKit/build/clang-release/CMakeFiles/Export/766bd305301f686e339f6babf0e04657/PlatformKitTargets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/PlatformKit/PlatformKitTargets-*.cmake")
       if(_cmake_old_config_files)
@@ -62,31 +62,23 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/PlatformKit" TYPE FILE FILES "E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-release/CMakeFiles/Export/766bd305301f686e339f6babf0e04657/PlatformKitTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/PlatformKit" TYPE FILE FILES "E:/Code/C_code/libraries/PlatformKit/build/clang-release/CMakeFiles/Export/766bd305301f686e339f6babf0e04657/PlatformKitTargets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/PlatformKit" TYPE FILE FILES "E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-release/CMakeFiles/Export/766bd305301f686e339f6babf0e04657/PlatformKitTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/PlatformKit" TYPE FILE FILES "E:/Code/C_code/libraries/PlatformKit/build/clang-release/CMakeFiles/Export/766bd305301f686e339f6babf0e04657/PlatformKitTargets-release.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/PlatformKit" TYPE FILE FILES "E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-release/PlatformKitConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/PlatformKit" TYPE FILE FILES "E:/Code/C_code/libraries/PlatformKit/build/clang-release/PlatformKitConfig.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
-  if(CMAKE_INSTALL_COMPONENT MATCHES "^[a-zA-Z0-9_.+-]+$")
-    set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
-  else()
-    string(MD5 CMAKE_INST_COMP_HASH "${CMAKE_INSTALL_COMPONENT}")
-    set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INST_COMP_HASH}.txt")
-    unset(CMAKE_INST_COMP_HASH)
-  endif()
+  set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()
   set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-release/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/Code/C_code/libraries/PlatformKit/build/clang-release/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
-endif()

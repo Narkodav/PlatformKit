@@ -1,87 +1,104 @@
 {
-    "version": 3,
+    "version": 6,
     "cmakeMinimumRequired": {
         "major": 3,
-        "minor": 21,
+        "minor": 25,
         "patch": 0
     },
+
     "configurePresets": [
         {
-            "name": "clang-debug",
-            "displayName": "Clang Debug",
-            "generator": "Ninja",
+            "name": "base",
+            "hidden": true,
+            "cacheVariables": {
+            "CONFIG_NAME": "base"
+            }
+        },
+
+        {
+            "name": "clang",
+            "hidden": true,
+            "inherits": "base",
+            "generator": "Ninja"
+        },
+
+        {
+            "name": "mingw",
+            "hidden": true,
+            "inherits": "base",
+            "generator": "Ninja"
+        },
+
+        {
+            "name": "msvc",
+            "hidden": true,
+            "inherits": "base",
+            "generator": "Ninja"
+        },
+
+        {
+            "name": "clang-debug-base",
+            "hidden": true,
+            "inherits": "clang",
             "binaryDir": "${sourceDir}/build/clang-debug",
             "cacheVariables": {
-                "CMAKE_C_COMPILER": "clang",
-                "CMAKE_CXX_COMPILER": "clang++",
                 "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/clang-debug",
-                "CommonApi_DIR": "E:/Program Files (x86)/Code/C_code/libraries/CommonApi/install/clang-debug/lib/cmake/CommonApi"
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/clang.cmake"
             }
         },
+
         {
-            "name": "clang-release",
-            "displayName": "Clang Release",
-            "generator": "Ninja",
+            "name": "clang-release-base",
+            "hidden": true,
+            "inherits": "clang",
             "binaryDir": "${sourceDir}/build/clang-release",
             "cacheVariables": {
-                "CMAKE_C_COMPILER": "clang",
-                "CMAKE_CXX_COMPILER": "clang++",
                 "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/clang-release",
-                "CommonApi_DIR": "E:/Program Files (x86)/Code/C_code/libraries/CommonApi/install/clang-release/lib/cmake/CommonApi"
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/clang.cmake"
             }
         },
+
         {
-            "name": "mingw-debug",
-            "displayName": "MinGW Debug",
-            "generator": "Ninja",
+            "name": "mingw-debug-base",
+            "hidden": true,
+            "inherits": "mingw",
             "binaryDir": "${sourceDir}/build/mingw-debug",
             "cacheVariables": {
-                "CMAKE_C_COMPILER": "gcc",
-                "CMAKE_CXX_COMPILER": "g++",
                 "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/mingw-debug",
-                "CommonApi_DIR": "E:/Program Files (x86)/Code/C_code/libraries/CommonApi/install/mingw-debug/lib/cmake/CommonApi"
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/mingw.cmake"
             }
         },
+
         {
-            "name": "mingw-release",
-            "displayName": "MinGW Release",
-            "generator": "Ninja",
+            "name": "mingw-release-base",
+            "hidden": true,
+            "inherits": "mingw",
             "binaryDir": "${sourceDir}/build/mingw-release",
             "cacheVariables": {
-                "CMAKE_C_COMPILER": "gcc",
-                "CMAKE_CXX_COMPILER": "g++",
                 "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/mingw-release",
-                "CommonApi_DIR": "E:/Program Files (x86)/Code/C_code/libraries/CommonApi/install/mingw-release/lib/cmake/CommonApi"
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/mingw.cmake"
             }
         },
+
         {
-            "name": "msvc-debug",
-            "displayName": "MSVC Debug",
-            "generator": "Ninja",
+            "name": "msvc-debug-base",
+            "hidden": true,
+            "inherits": "msvc",
             "binaryDir": "${sourceDir}/build/msvc-debug",
             "cacheVariables": {
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
                 "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/msvc-debug",
-                "CommonApi_DIR": "E:/Program Files (x86)/Code/C_code/libraries/CommonApi/install/msvc-debug/lib/cmake/CommonApi"
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/msvc.cmake"
             }
         },
+
         {
-            "name": "msvc-release",
-            "displayName": "MSVC Release",
-            "generator": "Ninja",
+            "name": "msvc-release-base",
+            "hidden": true,
+            "inherits": "msvc",
             "binaryDir": "${sourceDir}/build/msvc-release",
             "cacheVariables": {
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
                 "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/msvc-release",
-                "CommonApi_DIR": "E:/Program Files (x86)/Code/C_code/libraries/CommonApi/install/msvc-release/lib/cmake/CommonApi"
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/msvc.cmake"
             }
         }
     ]

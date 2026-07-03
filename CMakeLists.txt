@@ -107,7 +107,7 @@ install(EXPORT PlatformKitTargets
 
 include(CMakePackageConfigHelpers)
 configure_package_config_file(
-    ${CMAKE_CURRENT_SOURCE_DIR}/install/PlatformKitConfig.cmake.in
+    ${CMAKE_CURRENT_SOURCE_DIR}/cmake/PlatformKitConfig.cmake.in
     ${CMAKE_CURRENT_BINARY_DIR}/PlatformKitConfig.cmake
     INSTALL_DESTINATION lib/cmake/PlatformKit
 )

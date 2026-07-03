@@ -1,7 +1,6 @@
-# ninja log v5
-3	413	8005925202348224	build.ninja	811e82224143ab4b
-39	2730	8005925229984750	CMakeFiles/PlatformKitTests.dir/tests/test.cpp.obj	5e21573e9526228f
-32	2793	8005925230567183	CMakeFiles/PlatformKit.dir/src/PlatformKit/WindowWin32.cpp.obj	b6831f66005d984
-2794	2878	8005925231487289	libPlatformKit.a	c7ac16ab7d7b99cc
-2879	3009	8005925232917327	PlatformKitTests.exe	5f6c4ae43e0995
-3009	3061	0	CMakeFiles/install.util	9b89795e90183d2a
+# ninja log v6
+24	2740	8048021388980915	CMakeFiles/PlatformKit.dir/src/PlatformKit/WindowWin32.cpp.obj	2706c5de1f8485b6
+2748	2840	8048021416267294	libPlatformKit.a	7e4c7329713743a2
+32	3009	8048021389066054	CMakeFiles/PlatformKitTests.dir/tests/test.cpp.obj	e7e260c12b8153c4
+3011	3141	8048021418919159	PlatformKitTests.exe	21ae32ac93a9c95
+3143	3212	8048021420150869	CMakeFiles/install.util	64929041bfe2699c

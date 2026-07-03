@@ -2,8 +2,15 @@
 #include <cstdint>
 #include <stdexcept>
 #include <iostream>
+#include <exception>
 
 #include "PlatformKit/Structs.h"
+
+#ifdef _WIN32
+#include "PlatformKit/DefinesWin32.h"
+#else
+
+#endif
 
 namespace PlatformKit
 {
@@ -19,18 +26,17 @@ namespace PlatformKit
         WindowRefresh,
         WindowContentScaleChanged,
 
+#ifdef _WIN32
+        WindowStartResizing,
+        WindowStopResizing,
+        WindowBeingResized,
+#else
+
+
+#endif
         Native, //called on all events, returns platform native data
         Count
     };
-
-    namespace Win32
-    {
-        using WindowHandle = void*;
-        using InstanceHandle = void*;
-        using MessageResult = intptr_t;                     // matches LRESULT
-        using MessageValueUnsigned = uintptr_t;             // matches WPARAM
-        using MessageValueSigned = intptr_t;                // matches LPARAM
-    }
 
     struct WindowEventPolicy {
         using Type = WindowEvents;
@@ -51,6 +57,25 @@ namespace PlatformKit
             Win32::MessageValueUnsigned auxiliaryData, Win32::MessageValueSigned payloadData);
         static constexpr const char* s_name = "Native";
     };
+
+    template<>
+    struct WindowEventPolicy::Trait<WindowEvents::WindowStartResizing> {
+        using Signature = void();
+        static constexpr const char* s_name = "WindowStartResizing";
+    };
+
+    template<>
+    struct WindowEventPolicy::Trait<WindowEvents::WindowStopResizing> {
+        using Signature = void();
+        static constexpr const char* s_name = "WindowStopResizing";
+    };
+
+    template<>
+    struct WindowEventPolicy::Trait<WindowEvents::WindowBeingResized> {
+        using Signature = void(Win32::ResizeEdge edge, Win32::Rectangle* rect);
+        static constexpr const char* s_name = "WindowBeingResized";
+    };
+
 #else
 
 

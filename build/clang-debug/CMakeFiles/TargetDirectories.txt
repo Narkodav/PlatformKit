@@ -1,9 +1,9 @@
-E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/PlatformKit.dir
-E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/PlatformKitTests.dir
-E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/test.dir
-E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/edit_cache.dir
-E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/rebuild_cache.dir
-E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/list_install_components.dir
-E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/install.dir
-E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/install/local.dir
-E:/Program Files (x86)/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/install/strip.dir
+E:/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/PlatformKit.dir
+E:/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/PlatformKitTests.dir
+E:/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/test.dir
+E:/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/edit_cache.dir
+E:/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/rebuild_cache.dir
+E:/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/list_install_components.dir
+E:/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/install.dir
+E:/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/install/local.dir
+E:/Code/C_code/libraries/PlatformKit/build/clang-debug/CMakeFiles/install/strip.dir

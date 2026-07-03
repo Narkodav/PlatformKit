@@ -1,21 +1,5 @@
 ﻿#include "PlatformKit/Window.h"
 
-#ifdef STRICT
-#undef STRICT
-#endif
-#define STRICT 1
-
-// Also control related defines
-#ifndef NOMINMAX
-#define NOMINMAX
-#endif
-
-#ifndef WIN32_LEAN_AND_MEAN
-#define WIN32_LEAN_AND_MEAN
-#endif
-#include <windows.h>
-#include <windowsx.h>
-
 namespace PlatformKit::Win32
 {
     class Window::ClassRegistrator {
@@ -297,6 +281,11 @@ namespace PlatformKit::Win32
         
         // Window events
         case WM_SIZE: return callEvent<&Window::onWindowResized>(windowHandle, message, auxiliaryData, payloadData);
+
+        case WM_ENTERSIZEMOVE: return callEvent<&Window::onWindowStartResizing>(windowHandle, message, auxiliaryData, payloadData);
+        case WM_EXITSIZEMOVE: return callEvent<&Window::onWindowStopResizing>(windowHandle, message, auxiliaryData, payloadData);
+        case WM_SIZING: return callEvent<&Window::onWindowResizing>(windowHandle, message, auxiliaryData, payloadData);
+
         case WM_MOVE: return callEvent<&Window::onWindowMoved>(windowHandle, message, auxiliaryData, payloadData);
         case WM_SETFOCUS: return callEvent<&Window::onWindowFocused>(windowHandle, message, auxiliaryData, payloadData);
         case WM_KILLFOCUS: return callEvent<&Window::onWindowUnfocused>(windowHandle, message, auxiliaryData, payloadData);
@@ -568,6 +557,21 @@ namespace PlatformKit::Win32
                 m_windowEvents.emit<IOEvents::MouseWhellScrolled>(0, scrollDelta, mouseState.m_mousePos);
             }
         }
+        return 0;
+    }
+
+    LRESULT Window::onWindowStartResizing(WPARAM auxiliaryData, LPARAM payloadData) {
+        m_windowEvents.emit<WindowEvents::WindowStartResizing>();
+        return 0;
+    }
+    LRESULT Window::onWindowStopResizing(WPARAM auxiliaryData, LPARAM payloadData) {
+        m_windowEvents.emit<WindowEvents::WindowStopResizing>();
+        return 0;
+    }
+    LRESULT Window::onWindowResizing(WPARAM auxiliaryData, LPARAM payloadData) {
+        auto resizeEdge = static_cast<ResizeEdge>(auxiliaryData);
+        auto* rect = reinterpret_cast<Rectangle*>(payloadData);
+        m_windowEvents.emit<WindowEvents::WindowBeingResized>(resizeEdge, rect);
         return 0;
     }
 

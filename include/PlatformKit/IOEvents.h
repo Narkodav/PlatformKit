@@ -3,6 +3,7 @@
 #include <stdexcept>
 #include <iostream>
 #include <array>
+#include <exception>
 
 #include "PlatformKit/Structs.h"
 
@@ -505,8 +506,8 @@ namespace PlatformKit
         MouseButton7Released,
         MouseButton8Released,
 
-        MouseMovedScreen,   // for when the mouse visible moves on the screen
-        MouseMovedDelta,    // for any, even invisible, mouse movement 
+        MouseMovedScreen,   // for getting exact pixel coordinates
+        MouseMovedDelta,    // for any mouse movement 
         MouseWhellScrolled,
         //MouseEntered,
         MouseLeft,
